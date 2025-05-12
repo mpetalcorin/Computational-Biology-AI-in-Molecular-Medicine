@@ -1,0 +1,55 @@
+
+UNDERGRADUATE STUDENT WORKSHEET: PREDICTING DIABETES USING MACHINE LEARNING
+
+INSTRUCTIONS:
+Read the outputs from the notebook including the confusion matrix, feature importance, and precision-recall curve.
+Answer the questions below in your own words. Use the notebook to guide your thinking.
+
+---
+
+SECTION 1: MODEL EVALUATION
+
+1. According to the confusion matrix:
+   a. How many diabetic patients did the model correctly identify?
+   b. How many diabetic cases did it miss?
+   c. What do we call these two types of outcomes?
+
+2. The model predicts 86% accuracy. Is that a complete measure of performance? Why or why not?
+
+3. Compare the precision and recall for class 1 (diabetic). Which is higher? What does this suggest?
+
+---
+
+SECTION 2: FEATURE INTERPRETATION
+
+4. What were the top three most important features in predicting diabetes?
+
+5. Do these features make sense biologically? Explain why or why not.
+
+6. Can you think of any features that might be missing from the dataset that could improve predictions?
+
+---
+
+SECTION 3: PRECISION-RECALL CURVE
+
+7. What is the purpose of the precision-recall curve in this analysis?
+
+8. The average precision (AP) was reported as 0.35. What does this mean in practical terms?
+
+9. How does the shape of the precision-recall curve reflect the model’s performance on diabetic patients?
+
+---
+
+SECTION 4: CRITICAL THINKING
+
+10. What are the ethical implications of using an imperfect model for diagnosing real patients?
+
+11. If you were to improve this model, what steps might you take next (e.g., more data, feature engineering, algorithm tuning)?
+
+---
+
+Name: ____________________________     Date: ________________
+
+Instructor Feedback:
+______________________________________________________________________________
+

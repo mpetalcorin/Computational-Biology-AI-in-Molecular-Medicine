@@ -1,0 +1,62 @@
+
+TEACHER'S GUIDE: DIABETES PREDICTION STUDENT WORKSHEET
+
+This guide provides suggested answers for instructors using the undergraduate worksheet.
+
+---
+
+SECTION 1: MODEL EVALUATION
+
+1. a. Correctly identified diabetic patients = 2,076
+   b. Missed diabetic patients = 8,423
+   c. Correctly identified = True Positives; Missed = False Negatives
+
+2. Accuracy is not enough because the dataset is imbalanced. Most patients do not have diabetes, so the model can be accurate just by predicting "no diabetes." We must look at precision, recall, and F1-score.
+
+3. Precision = 0.45, Recall = 0.20 for diabetic class. Precision is higher, which means that when it predicts diabetes, it's more likely to be correct. However, recall is low, so it misses many diabetic patients.
+
+---
+
+SECTION 2: FEATURE INTERPRETATION
+
+4. Top three features:
+   - HighBP (high blood pressure)
+   - GenHlth (self-rated general health)
+   - HighChol (high cholesterol)
+
+5. Yes, these make biological sense. High blood pressure and cholesterol are known risk factors for type 2 diabetes. General health captures subjective overall condition, often influenced by these factors.
+
+6. Possible missing features could include:
+   - Family history of diabetes
+   - Diet and nutrition
+   - Blood glucose levels
+   - Genetic markers
+
+---
+
+SECTION 3: PRECISION-RECALL CURVE
+
+7. It helps visualize how well the model can identify diabetic patients (recall) while limiting false positives (precision).
+
+8. AP = 0.35 means that, on average, when the model predicts diabetes, it’s correct about 35% of the time across all thresholds. This is moderate performance and reflects room for improvement.
+
+9. The curve shows a steep drop in precision as recall increases. This means that as we try to catch more diabetic patients, the model also produces more false alarms.
+
+---
+
+SECTION 4: CRITICAL THINKING
+
+10. Ethical implications include the risk of:
+    - Missing real diabetic cases (false negatives), which could delay treatment.
+    - False alarms (false positives), causing stress or unnecessary testing for healthy individuals.
+
+11. Improvements could include:
+    - Collecting more balanced data
+    - Using different or more advanced algorithms
+    - Fine-tuning model parameters
+    - Adding clinically relevant features
+    - Cross-validation to test model robustness
+
+---
+
+Use this guide to provide feedback, promote classroom discussion, and encourage deeper understanding of model fairness and practical use in healthcare.
