@@ -26,12 +26,67 @@ This repository contains a collection of Jupyter notebooks, datasets, and machin
 - `diabetes_binary_health_indicators_BRFSS2015.csv` — CDC public health diabetes data.
 - `vitamin_d_cold_study.csv` — Nutritional study dataset for vitamin D and cold resistance.
 
+#### Data Sheet: METABRIC_RNA_Mutation.csv
+
+#### Dataset Description
+The METABRIC dataset includes gene expression and clinical data from over 1,900 breast cancer patients. This version contains processed RNA mutation profiles and clinical subtype labels for machine learning applications.
+
+#### Source
+- Origin: METABRIC Study via Kaggle
+- Link: https://www.kaggle.com/datasets/raghadalharbi/breast-cancer-gene-expression-profiles-metabric
+
+#### Structure
+- **Rows**: Patient samples
+- **Columns**: Gene expressions, clinical features, and subtype labels
+- **Target Variable**: `pam50_+_claudin-low_subtype`
+
+#### Intended Use
+- Education and training in genomics, bioinformatics, and machine learning
+- Demonstrating genotype-to-phenotype predictions
+- Teaching SHAP interpretability and feature engineering
+
+#### Limitations
+- Dataset may not generalize to all populations
+- Requires preprocessing and validation before real-world use
+
+#### Citation
+Curtis et al., 2012. The genomic and transcriptomic architecture of 2,000 breast tumours reveals novel subgroups. Nature.
+
 ### Learning Resources
 - `diabetes_prediction_student_worksheet.txt` — Guided worksheet for students.
 - `diabetes_prediction_teachers_guide.txt` — Teaching guide with discussion points.
 
 ### Model Files
 - `optimized_xgb_model.pkl` — Optimized and exportable XGBoost model from METABRIC notebook.
+
+#### Model Card: Optimized XGBoost for Breast Cancer Subtype Prediction
+
+#### Model Overview
+This XGBoost model was trained on the METABRIC_RNA_Mutation.csv dataset to predict breast cancer molecular subtypes (e.g., Luminal A, Luminal B, HER2-enriched, Basal-like) using clinical and RNA expression features.
+
+#### Intended Use
+The model is designed for educational and research purposes, demonstrating interpretable machine learning in computational biology. It is **not** intended for clinical use.
+
+#### Model Details
+- **Algorithm**: XGBoost Classifier
+- **Features**: Gene expression levels and clinical markers
+- **Target**: PAM50 + Claudin-low subtype labels
+- **Hyperparameter Optimization**: GridSearchCV
+- **Evaluation Metrics**: Accuracy, confusion matrix, classification report, cross-validation
+
+#### Performance
+- Mean Accuracy (CV): ~0.85 (varies by fold and dataset)
+- SHAP interpretability used to identify top contributing features
+- Confusion matrices provided in notebook for model behavior analysis
+
+#### Ethical Considerations
+- The model was trained on anonymized data
+- Not validated across diverse patient populations
+- Must not be used for medical decision-making
+
+#### Citation
+Frangoul et al., 2021; METABRIC Dataset via Kaggle
+
 
 ## Highlights
 
@@ -40,6 +95,10 @@ This repository contains a collection of Jupyter notebooks, datasets, and machin
 - **Cross-validation & Grid Search** — Hyperparameter tuning and robust model performance validation.
 - **Biomedical Statistics** — From basic hypothesis testing to clinical trial analytics.
 - **Protein-Ligand Interaction Prediction** — Interpretable ML in molecular docking scenarios.
+
+### Learning Resources
+- `diabetes_prediction_student_worksheet.txt` — Guided worksheet for students.
+- `diabetes_prediction_teachers_guide.txt` — Teaching guide with discussion points.
 
 ## Getting Started
 
